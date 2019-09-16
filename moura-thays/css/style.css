@@ -1,0 +1,37 @@
+body{
+    align-items: center;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+    width: 400px;
+}
+.palavra{
+    color: whitesmoke;
+    display: flex;
+    font-size: 20pt;
+    height: 20px;
+    width: 20px;
+}
+section{
+    display: flex;
+}
+.teclas{
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 50%;
+    color: #202020;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin: 1px;
+    width: 40px;
+}
+.teclas:hover{
+    cursor: pointer;
+}
