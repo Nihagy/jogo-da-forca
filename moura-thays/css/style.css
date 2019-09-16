@@ -11,9 +11,22 @@ article{
     margin-top: 80px;
     width: 400px;
 }
+.correta{
+    background-color: lightgreen;
+}
+.correta, .incorreta{
+    border-radius: 50%;
+    font-size: 0;
+    height: 40px;
+    margin: 1px;
+    width: 40px;
+}
+.incorreta{
+    background-color: lightcoral;
+}
 .palavra{
     color: whitesmoke;
-    display: flex;
+    display: none;
     font-size: 20pt;
     height: 20px;
     width: 20px;
