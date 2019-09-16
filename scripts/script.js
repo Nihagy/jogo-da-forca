@@ -11,6 +11,7 @@ const dica = palavras[indice].dica
 const palavra = palavras[indice].palavra
 const palavraEmArray = palavra.split('')
 const teclado = document.getElementsByClassName('teclas')
+const paragrafoParaDica = document.querySelector('header p')
 
 
 const atribuirPalavra = () => {
@@ -38,13 +39,16 @@ const compararLetras = (letra, tecla) => {
     }
     else{
         tecla.className = 'incorreta'
+        verificarDerrota()
     }
 }
 
 const escreverDica = (dica) => {
+    paragrafoParaDica.innerHTML = dica
 }
 
 const mostrarPalavra = (letra) => {
+    verificarVitoria()
 
     for(let i = 0; i < divsPalavra.length; i++){
         if(divsPalavra[i].innerHTML === letra){
@@ -60,6 +64,20 @@ const pegarValor = (event) => {
     compararLetras(letra, tecla)
 }
 
+const verificarDerrota = () => {
+    const incorretas = document.getElementsByClassName('incorreta').length
+
+    if(incorretas > 6){
+        document.write("Você perdeu")
+    }
+}
+const verificarVitoria = () => {
+    const corretas = document.getElementsByClassName('correta').length
+    
+    if(corretas == palavra.length){
+        document.write("Você venceu!!!!")
+    }
+}
 atribuirValores()
 
 

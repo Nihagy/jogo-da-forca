@@ -1,6 +1,7 @@
 body{
     align-items: center;
     background-color: blue;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
 }
@@ -20,6 +21,12 @@ article{
     height: 40px;
     margin: 1px;
     width: 40px;
+}
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
 }
 .incorreta{
     background-color: lightcoral;
