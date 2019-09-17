@@ -37,6 +37,7 @@ const compararLetras = (letra, tecla) => {
     if(palavraEmArray.includes(letra)){
         tecla.className = 'correta'
         mostrarPalavra(letra)
+        verificarVitoria()
     }
     else{
         tecla.className = 'incorreta'
@@ -49,7 +50,6 @@ const escreverDica = (dica) => {
 }
 
 const mostrarPalavra = (letra) => {
-    verificarVitoria()
 
     for(let i = 0; i < divsPalavra.length; i++){
         if(divsPalavra[i].innerHTML === letra){
@@ -73,9 +73,15 @@ const verificarDerrota = () => {
     }
 }
 const verificarVitoria = () => {
-    const corretas = document.getElementsByClassName('correta').length
+    let contador
+    let i = 0
 
-    if(corretas == palavra.length){
+    while(divsPalavra[i].innerHTML){
+        contador++
+        i++
+    }
+
+    if(contador == palavra.length){
         document.write("Você venceu!!!!")
     }
 }
