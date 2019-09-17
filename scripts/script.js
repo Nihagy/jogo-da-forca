@@ -55,6 +55,7 @@ const mostrarPalavra = (letra) => {
             divsPalavra[i].className = "palavra"
         }
     }
+    verificarVitoria()
 }
 
 const pegarValor = (event) => {
@@ -71,16 +72,8 @@ const verificarDerrota = () => {
     }
 }
 const verificarVitoria = () => {
-    let contador = 0
-    let i = 0
-
-    while(divsPalavra[i].hidden){
-
-        contador++
-        i++
-    }
-     console.log(contador)
-    if(contador == palavra.length){
+    const inativos = document.getElementsByClassName('inativo')
+    if(inativos.length == 0){
         document.write("Você venceu!!!!")
     }
 
