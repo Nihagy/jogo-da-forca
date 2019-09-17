@@ -14,6 +14,7 @@ const paragrafoParaDica = document.querySelector('header p')
 
 
 const atribuirPalavra = () => {
+    
     for(let i = 0; i < palavra.length; i++){
         divsPalavra[i].innerHTML = palavra[i]
         divsPalavra[i].className = 'inativo'
@@ -66,7 +67,6 @@ const pegarValor = (event) => {
 
 const verificarDerrota = () => {
     const incorretas = document.getElementsByClassName('incorreta').length
-
     if(incorretas > 6){
         document.write("Você perdeu")
     }
