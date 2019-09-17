@@ -9,21 +9,20 @@ const palavras = [
 ]
 const dica = palavras[indice].dica
 const palavra = palavras[indice].palavra
-const palavraEmArray = palavra.split('')
 const teclado = document.getElementsByClassName('teclas')
 const paragrafoParaDica = document.querySelector('header p')
 
 
 const atribuirPalavra = () => {
-    for(let i = 0; i < palavraEmArray.length; i++){
-        divsPalavra[i].innerHTML = palavraEmArray[i]
+    for(let i = 0; i < palavra.length; i++){
+        divsPalavra[i].innerHTML = palavra[i]
         divsPalavra[i].className = 'inativo'
     }
     escreverDica(dica)
 }
 
 const atribuirValores = () => {
-
+    
     for(let i = 0; i < teclado.length; i++){
         teclado[i].innerHTML = letrasParaTeclado[i]
         teclado[i].onclick = pegarValor
@@ -32,8 +31,9 @@ const atribuirValores = () => {
 }
 
 const compararLetras = (letra, tecla) => {
+    const palavraEmArray = palavra.split('')
     tecla.onclick = null
-
+    
     if(palavraEmArray.includes(letra)){
         tecla.className = 'correta'
         mostrarPalavra(letra)
@@ -73,15 +73,8 @@ const verificarDerrota = () => {
     }
 }
 const verificarVitoria = () => {
-    let contador
-    let i = 0
-
-    while(divsPalavra[i].innerHTML){
-        contador++
-        i++
-    }
-
-    if(contador == palavra.length){
+    const inativos = document.getElementsByClassName('inativo')
+    if(inativos.length == 0){
         document.write("Você venceu!!!!")
     }
 }
