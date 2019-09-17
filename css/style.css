@@ -13,12 +13,18 @@ body{
 
 nav{
     background-color: #3a3a3b;
-    grid-area: nav;    
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-
+nav a{
+    text-decoration: none;
+}
 nav img{
     height: 100%;
-    margin-left: 25px;
+    margin-left: 0px;
+
 }
 header{
     display: flex;
