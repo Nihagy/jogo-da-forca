@@ -1,5 +1,5 @@
-const divsPalavra = document.getElementsByClassName('palavra')
-const indice = Math.floor(Math.random()*3)
+const divsPalavra = document.querySelectorAll('section div')
+const indice = Math.floor(Math.random()*4)
 const letrasParaTeclado = "abcdefghijklmnopqrstuvwxyz"
 const palavras = [
     {'palavra': 'banana' , 'dica': 'fruta' },
@@ -17,6 +17,7 @@ const paragrafoParaDica = document.querySelector('header p')
 const atribuirPalavra = () => {
     for(let i = 0; i < palavraEmArray.length; i++){
         divsPalavra[i].innerHTML = palavraEmArray[i]
+        divsPalavra[i].className = 'inativo'
     }
     escreverDica(dica)
 }
@@ -52,7 +53,7 @@ const mostrarPalavra = (letra) => {
 
     for(let i = 0; i < divsPalavra.length; i++){
         if(divsPalavra[i].innerHTML === letra){
-            divsPalavra[i].style.display = 'block'
+            divsPalavra[i].className = "palavra"
         }
     }
 }
@@ -73,13 +74,9 @@ const verificarDerrota = () => {
 }
 const verificarVitoria = () => {
     const corretas = document.getElementsByClassName('correta').length
-    
+
     if(corretas == palavra.length){
         document.write("Você venceu!!!!")
     }
 }
 atribuirValores()
-
-
-
-
