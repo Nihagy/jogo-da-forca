@@ -74,7 +74,8 @@ const verificarVitoria = () => {
     let contador = 0
     let i = 0
 
-    while(divsPalavra[i].innerHTML){
+    while(divsPalavra[i].hidden){
+
         contador++
         i++
     }
