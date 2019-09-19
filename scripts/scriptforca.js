@@ -70,12 +70,22 @@ const verificarDerrota = () => {
 
     if(incorretas > 6){
         document.write("Você perdeu")
+        setTimeout(() => {
+             window.location.reload()}, 2000)
     }
+    
 }
 const verificarVitoria = () => {
     const inativos = document.getElementsByClassName('inativo')
     if(inativos.length == 0){
         document.write("Você venceu!!!!")
+        setTimeout(() => {
+            window.location.reload()}, 2000)
     }
 }
-atribuirValores()
+atribuirValores()  
+
+const button = document.querySelector("sePerder");
+button= verificarDerrota();  
+
+
