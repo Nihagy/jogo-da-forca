@@ -10,7 +10,7 @@ article{
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 60px;
     width: 400px;
 }
 .correta{
@@ -76,6 +76,10 @@ section span{
     margin: 0.2vw;
 }
 
+.span-inativo{
+    display: none;
+}
+
 img{
     margin: 15px;
     width: 20vw;
@@ -83,7 +87,6 @@ img{
     justify-content: space-around;
 
 }
-
 
 .teclas{
     align-items: center;
