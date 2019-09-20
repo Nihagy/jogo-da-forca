@@ -7,19 +7,25 @@ body{
                             "footer footer footer footer footer";
 
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 8vh 60vh 50vh 30vh 8vh;
+    grid-template-rows: 10vh 60vh 50vh 30vh 8vh;
     margin: 0px;
 }
 
 nav{
+    text-align: center;
     background-color: #3a3a3b;
     grid-area: nav;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    
 }
-nav a{
+nav h1{
+    
+    color: aliceblue;
     text-decoration: none;
+    justify-content: center;
+    margin-right: 590px;
+    
 }
 nav img{
     height: 100%;
