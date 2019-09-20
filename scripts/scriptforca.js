@@ -69,7 +69,7 @@ const verificarDerrota = () => {
     const incorretas = document.getElementsByClassName('incorreta').length
 
     if(incorretas > 6){
-        document.write("Você perdeu")
+        alert("Você perdeu")
         setTimeout(() => {
              window.location.reload()}, 2000)
     }
@@ -78,7 +78,7 @@ const verificarDerrota = () => {
 const verificarVitoria = () => {
     const inativos = document.getElementsByClassName('inativo')
     if(inativos.length == 0){
-        document.write("Você venceu!!!!")
+        alert("Você venceu!!!!")
         setTimeout(() => {
             window.location.reload()}, 2000)
     }

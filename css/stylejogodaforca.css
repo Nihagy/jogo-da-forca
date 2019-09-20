@@ -57,7 +57,7 @@ header a{
     font-size: 20pt;
     height: 30px;
     justify-content: center;
-    width: 30px;
+    width: 30vw;
 }
 section{
     display: flex;
@@ -65,13 +65,15 @@ section{
 }
 
 section div{
-    margin: 0 auto;
+    margin: 10vw;
+    justify-content: center;
+    width: 10;
 }
 
 section img{
-    margin-right: 200px;
+    margin-right: 0px;
     width: 20vw;
-    height: 50vh;
+    height: 43vh;
     justify-content: space-between;
     margin-left: 0;
 }
