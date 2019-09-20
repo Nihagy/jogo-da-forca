@@ -55,27 +55,33 @@ header a{
     color: whitesmoke;
     display: flex;
     font-size: 20pt;
-    height: 30px;
     justify-content: center;
-    width: 30vw;
 }
 section{
-    display: flex;
-    align-items: flex-end;
+    display: grid;
+    grid-template-areas: " . d0 d1 d2 d3 d4 d5 d6 ."
+                         " . t0 t1 t2 t3 t4 t5 t6 .";
+    grid-template-columns: 30.2vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 30.2vw;
+    grid-template-rows: 50px 20px;
 }
 
 section div{
-    margin: 10vw;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 10;
+}
+section span{
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+    margin: 0.2vw;
 }
 
-section img{
-    margin-right: 0px;
+img{
+    margin: 15px;
     width: 20vw;
     height: 43vh;
-    justify-content: space-between;
-    margin-left: 0;
+    justify-content: space-around;
+
 }
 
 

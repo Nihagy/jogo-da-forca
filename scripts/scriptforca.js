@@ -1,4 +1,5 @@
 const divsPalavra = document.querySelectorAll('section div')
+const spanPalavra = document.querySelectorAll('section span')
 const indice = Math.floor(Math.random()*4)
 const letrasParaTeclado = "abcdefghijklmnopqrstuvwxyz"
 const palavras = [
@@ -16,9 +17,19 @@ const paragrafoParaDica = document.querySelector('header p')
 const atribuirPalavra = () => {
     for(let i = 0; i < palavra.length; i++){
         divsPalavra[i].innerHTML = palavra[i]
-        divsPalavra[i].className = 'inativo'
+        divsPalavra[i].className = 'inativo' 
+        divsPalavra[i].style.gridArea = "d"+ i
+        spanPalavra[i].style.gridArea = "t"+ i
     }
     escreverDica(dica)
+}
+
+const atribuirTracos = () => {
+    let l = divsPalavra.length - palavra.length
+    for(let i = divsPalavra.length - 1; l > 0 ; i-- ){
+        spanPalavra[i].className = 'inativo'
+        l--
+    }
 }
 
 const atribuirValores = () => {
@@ -85,7 +96,5 @@ const verificarVitoria = () => {
 }
 atribuirValores()  
 
-const button = document.querySelector("sePerder");
-button= verificarDerrota();  
-
+atribuirTracos()
 
