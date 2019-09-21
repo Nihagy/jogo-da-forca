@@ -4,6 +4,22 @@ body{
     color: whitesmoke;
     display: flex;
     flex-direction: column;
+    margin: 0;
+}
+nav{
+    background-size: 15vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+nav h1{
+    font-family: 'Luckiest Guy';
+    font-size: xx-large;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.829);
+    text-decoration: none;
+    align-items: flex-end;
 }
 article{
     display: flex;
@@ -89,6 +105,7 @@ img{
 }
 
 .teclas{
+    font-family: 'Fira Sans', sans-serif;
     align-items: center;
     background-color: aliceblue;
     border-radius: 50%;
@@ -96,11 +113,23 @@ img{
     display: flex;
     height: 40px;
     justify-content: center;
-    margin: 1px;
+    margin: 2px;
     width: 40px;
 }
 .teclas:hover{
     cursor: pointer;
 }
-
-
+footer{
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-size: 10px;
+    margin: 0;
+    
+}
+footer img{
+    width: 20px;
+    height: 20px;
+}
