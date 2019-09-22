@@ -39,6 +39,12 @@ article{
     margin: 1px;
     width: 40px;
 }
+
+div img {
+    display: flex;
+    margin: 0 auto;
+}
+
 header{
     align-items: center;
     display: flex;
@@ -60,6 +66,7 @@ header a{
     margin-right: 50px;
     color: whitesmoke;
 }
+
 .inativo{
     display: none;
 }
@@ -77,7 +84,7 @@ section{
     display: grid;
     grid-template-areas: " . d0 d1 d2 d3 d4 d5 d6 ."
                          " . t0 t1 t2 t3 t4 t5 t6 .";
-    grid-template-columns: 30.2vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 30.2vw;
+    grid-template-columns: 35vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 30.2vw;
     grid-template-rows: 50px 20px;
 }
 
@@ -85,11 +92,12 @@ section div{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 section span{
     background-color: rgb(255, 255, 255);
     height: 2px;
-    margin: 0.2vw;
+    margin: 0.5vw;
 }
 
 .span-inativo{
