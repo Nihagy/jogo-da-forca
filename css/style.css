@@ -1,87 +1,135 @@
 body{
-    display: grid;
-    grid-template-areas:    "nav nav nav nav nav"
-                            "header header header header header"
-                            "main main main main main "
-                            "section section section section section"
-                            "footer footer footer footer footer";
-
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 10vh 60vh 50vh 30vh 8vh;
-    margin: 0px;
-}
-
-nav{
-    text-align: center;
-    background-color: #3a3a3b;
-    grid-area: nav;
+    /* align-items: center; */
+    background-color: blue;
+    color: whitesmoke;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+}
+nav{
+    background-size: 15vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
     
 }
 nav h1{
-    
-    color: aliceblue;
+    font-family: 'Luckiest Guy';
+    font-size: xx-large;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.829);
     text-decoration: none;
-    justify-content: center;
-    margin-right: 590px;
-    
+    align-items: flex-end;
 }
-nav img{
-    height: 100%;
-    margin-left: 0px;
-
+article{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 60px;
+    width: 400px;
+}
+.correta{
+    background-color: lightgreen;
+}
+.correta, .incorreta{
+    border-radius: 50%;
+    font-size: 0;
+    height: 40px;
+    margin: 1px;
+    width: 40px;
 }
 header{
+    align-items: center;
     display: flex;
-    grid-area: header;
-    /* background-image: url(../imagens/banner.jpg); */
-    
+    /* justify-content: space-around; */
 }
 
-header img{
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+header h2 {
+    margin: 30px 10px 0 auto;
 }
-main{
-    align-items: flex-end;
-    background-color: brown;
+
+header p{
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px auto 0 10px;
+}
+
+header a{
+    margin-right: 50px;
+    color: whitesmoke;
+}
+.inativo{
+    display: none;
+}
+.incorreta{
+    background-color: lightcoral;
+}
+.palavra{
+    align-items: center;
+    color: whitesmoke;
     display: flex;
-    grid-area: main;
+    font-size: 20pt;
+    justify-content: center;
+}
+section{
+    display: grid;
+    grid-template-areas: " . d0 d1 d2 d3 d4 d5 d6 ."
+                         " . t0 t1 t2 t3 t4 t5 t6 .";
+    grid-template-columns: 30.2vw 5vw 5vw 5vw 5vw 5vw 5vw 5vw 30.2vw;
+    grid-template-rows: 50px 20px;
+}
+
+section div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section span{
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+    margin: 0.2vw;
+}
+
+.span-inativo{
+    display: none;
+}
+
+img{
+    margin: 15px;
+    width: 20vw;
+    height: 43vh;
     justify-content: space-around;
 
 }
 
-main div{
-    margin: 20px;
-    background-color:black;
-    height: 5px;
-    width: 50px;
-}
-
-main img{
-    width: 20%;
-    justify-content: center;
-    margin-left: 0;
-}
-
-section{
-    background-color: chartreuse;
-    grid-area: section;
-}
-
-footer{
-    display: flex;
-    background-color: cornflowerblue;
-    grid-area: footer;
-    justify-content: center;
+.teclas{
+    font-family: 'Fira Sans', sans-serif;
     align-items: center;
+    background-color: aliceblue;
+    border-radius: 50%;
+    color: #202020;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin: 2px;
+    width: 40px;
+}
+.teclas:hover{
+    cursor: pointer;
+}
+footer{
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-size: 10px;
+    margin: 0;
+    
 }
 footer img{
-    margin: 0 20px;
-    height: 30px;
-    width: 30px;
-    /* border-radius: 50%; */
+    width: 20px;
+    height: 20px;
 }
-
